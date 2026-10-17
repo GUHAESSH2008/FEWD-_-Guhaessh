@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Login Form using JS DOM</title>
+
+        <style>
+            form{
+                border: 1px solid black;
+            width: 400px;
+            margin-left: 700px;
+            padding-left: 40px;
+            margin-top: 250px;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-bottom: 40px;
+            background-color: azure;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <form id="loginForm">
+            <h1>Login Form using JS DOM</h1>
+
+            <label>Username:</label>
+            <input type="text" name="Username" id="u"><br><br>
+
+            <label>Password:</label>
+            <input type="password" name="Password" id="p"><br><br>
+
+            <button type="button" onClick="Login()">Submit</button>
+            <button type="reset">Reset</button><br><br>
+
+            <!-- <p id="para">Result:</p> -->
+             <p id="result"> </p>
+        </form>
+
+        <script>
+            function Login() {
+                let username = document.getElementById("u").value;
+                let password = document.getElementById("p").value;
+
+                // document.getElementById("para").innerHTML =
+                //     "Result: " + username + " | " + password;
+                document.getElementById("result").innerHTML = "login successful! Welcome, " + username + "!";
+                    
+            }
+        </script>
+    </body>
+</html>
